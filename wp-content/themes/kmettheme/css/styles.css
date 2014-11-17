@@ -1,0 +1,827 @@
+/*
+Theme Name: KMET
+Description: 2014 theme for KMET site
+Author: MOC
+Version: 1.0
+
+*/
+
+
+
+
+
+
+@font-face {
+    font-family: 'helveticabold';
+    src: url('../fonts/helvetica-bold-webfont.eot');
+    src: url('../fonts/helvetica-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/helvetica-bold-webfont.woff2') format('woff2'),
+    url('../fonts/helvetica-bold-webfont.woff') format('woff'),
+    url('../fonts/helvetica-bold-webfont.ttf') format('truetype'),
+    url('../fonts/helvetica-bold-webfont.svg#helveticabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'helveticaregular';
+    src: url('../fonts/948646-webfont.eot');
+    src: url('../fonts/948646-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/948646-webfont.woff2') format('woff2'),
+    url('../fonts/948646-webfont.woff') format('woff'),
+    url('../fonts/948646-webfont.ttf') format('truetype'),
+    url('../fonts/948646-webfont.svg#helveticaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'lucidagrande';
+    src: url('../fonts/lucida_grande-webfont.eot');
+    src: url('../fonts/lucida_grande-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/lucida_grande-webfont.woff2') format('woff2'),
+    url('../fonts/lucida_grande-webfont.woff') format('woff'),
+    url('../fonts/lucida_grande-webfont.ttf') format('truetype'),
+    url('../fonts/lucida_grande-webfont.svg#lucida_granderegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html,body                       { width:100%; height:100%; }
+body                            { padding:0; margin:0; font:14px Verdana, Arial, sans-serif; line-height:150%; background:#fff; color:#000; }
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea {
+	padding:0;
+	margin:0;
+	outline:none;
+
+}
+ul{    list-style:none;     }
+textarea                       { vertical-align:top; }
+select, input, textarea           { outline:none; }
+input[type=submit]             { cursor:pointer; }
+img, fieldset                  { border:0; }
+table                          { border-collapse:collapse; border-spacing:0; }
+a:link, a:visited              { font-family:"Lucida Grande", sans-serif; font-size:12px; color:#00661a; text-decoration:none; }
+a:hover                        { text-decoration:underline; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------DEFAULT CLASSES------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.float-r           	           { float:right !important; }
+.float-l                       { float:left !important; }
+.no-float                      { float:none !important; }
+.no-border                     { border:0 !important; }
+.no-bg                         { background:none !important; }
+.no-margin                     { margin:0 !important; }
+.no-padding                    { padding:0 !important; }
+.no-display                    { display:none !important; }
+.display                       { display:block !important; }
+.inline                        { display:inline !important; }
+.overflow                      { overflow:hidden !important; }
+.align-r                       { text-align:right !important; }
+.align-l                       { text-align:left !important; }
+.align-c                       { text-align:center !important; }
+.clear                         { clear:both; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------WRAPPER--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------HEADER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+header{
+    background:#000;
+    overflow:hidden;
+    margin:0;
+    padding:0;
+    position:relative;
+    min-height:51px;
+}
+nav{
+    position:fixed;
+    z-index:10;
+    /*position:absolute;*/
+    left:0;
+    top:0;
+    width:100%;
+    text-align:center;
+    background: #1d1d1d; /* Old browsers */
+    background: -moz-linear-gradient(top, #1d1d1d 0%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1d1d1d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #1d1d1d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #1d1d1d 0%,#000000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #1d1d1d 0%,#000000 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #1d1d1d 0%,#000000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d1d1d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  /*  font-size:1.1275em;*/
+    min-height:3.9em;
+}
+li .top-menu{
+    display:inline-block;
+    text-transform:uppercase;
+    font-family:"helveticabold", sans-serif;
+    font-size:1.14285em;
+    font-weight:600;
+    color:#a0a0a0;
+    line-height:3.4375em;
+    padding:0 30px;
+    margin:0;
+    vertical-align:middle;
+}
+.top-nav li{
+    display:inline-block;
+    text-align:center;
+    background:url('../images/top-splitter.png') right center no-repeat;
+}
+.top-nav{
+    position:absolute;
+    top:0;
+    display:inline-block;
+    background:url('../images/top-splitter.png') left center no-repeat;
+}.left{
+     right:50%;
+     text-align:right;
+     margin-right:95px;
+}
+.right{
+    left:50%;
+    text-align:left;
+    margin-left:95px;
+}
+.logo{
+
+    display:inline-block;
+    height:180px;
+    width:160px;
+    background-size:contain;
+}
+.header{
+    position:absolute;
+    top:0;
+    margin-left:-80px;
+    left:50%;
+    margin-top:-80px;
+    background:url('../images/logo-top.png') center -10px no-repeat;
+    background-size:contain;
+}
+.header:hover{
+    margin-top:0 !important;
+}
+.header
+{
+    transition:all 0.5s ease;
+}
+.logo:hover, .consultation:hover, .mail_us:hover {
+    opacity: 0.8;
+}
+.top-menu:hover, .top-menu.active{
+    color:#fff;
+    text-decoration:none;
+}
+.top-background, .top-background-small{
+    max-height:100%;
+    height:auto;
+    width:auto;
+    max-width:100%;
+    margin:0 auto;
+    display:block;
+}
+.top-background-small{
+    display:none;
+}
+.slogan{
+    font-family: Georgia, times, serif;
+    font-size:40px;
+    font-weight:normal;
+    position:absolute;
+    width:60%;
+    top:31%;
+    left:20%;
+    line-height:1em;
+    text-align:center;
+    color:#fff;
+    text-shadow:2px 2px 2px #000;
+}
+.slogan-ukr{
+    font-size:23px;
+    display:block;
+}
+header .mail_us{
+    position:absolute;
+    top:49.5%;
+    left:50%;
+    margin-left:-7em;
+    box-shadow:0 0 0 0.5em rgba(255, 255, 255, 0.5);
+    border-radius:8px;
+    font-size:1.14825em;
+    color:#fff;
+    font-family:"helveticabold", sans-serif;
+    text-transform:uppercase;
+    font-weight:bold;
+    width:14em;
+    text-align:center;
+    padding:1em;
+    background:#0e490e;
+}
+header .consultation{
+    position:absolute;
+    top:64.5%;
+    left:50%;
+    margin-left:-7.5em;
+    font-size:1.14825em;
+    color:#fff;
+    font-family:"helveticabold", sans-serif;
+    text-transform:lowercase;
+    font-weight:normal;
+    text-decoration:underline;
+    width:15em;
+    text-align:center;
+    box-shadow:inset -1px -1px 3px  rgba(255, 255, 255, 0.3);
+    border-radius:10px;
+    background:rgba(7, 5, 4, 0.6);
+    padding:0.75em;
+}
+.about-us{
+    position:absolute;
+    bottom:0;
+    left:0;
+    color:#fff;
+    width:100%;
+    background:rgba(0, 0, 0, 0.5) url('../images/logo.png') 25% center no-repeat;
+    font-family: Georgia, times, serif;
+    font-size:1.4285em;
+    padding:2em 20% 2em 35% ;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------NAV------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CONTENT--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.container{
+    width:100%;
+    max-width:960px;
+
+    margin:0 auto;
+    padding:35px 0;
+}
+.page-header, .founder-name{
+    font-size:24px;
+    font-weight:bold;
+    color:#00661a;
+    text-shadow:1px 1px 2px #888;
+    border:none;
+    text-align:center;
+    padding:0 0 20px 0;
+    line-height:1em;
+}
+.founder-name{
+    padding-bottom:10px;
+
+}
+.big-thumb-img, .thumb-news{
+    border-radius:100%;
+    height:150px;
+    width:150px;
+    /*border:4px solid #fff;
+    box-shadow:0px 1px 3px  #444, inset 0 -1px 3px  #000;*/
+    display:inline-block;
+}
+.thumb-link{
+    display:inline-block;
+    position:relative;
+    margin-bottom:35px;
+}
+.thumb-link:after {
+    background: url('../images/border.png') center no-repeat;
+    height: 104%;
+    width: 104%;
+    display: block;
+    content: "";
+    position: absolute;
+    left: -2%;
+    top: -2%;
+    background-size: cover;
+}
+.founders {
+    background: #dddddd; /* Old browsers */
+    background: -moz-linear-gradient(top, #dddddd 53%, #d0d0d0 99%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(53%, #dddddd), color-stop(99%, #d0d0d0)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #dddddd 53%, #d0d0d0 99%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #dddddd 53%, #d0d0d0 99%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #dddddd 53%, #d0d0d0 99%); /* IE10+ */
+    background: linear-gradient(to bottom, #dddddd 53%, #d0d0d0 99%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dddddd', endColorstr='#d0d0d0', GradientType=0); /* IE6-9 */
+    border-bottom: 1px solid #999;
+}
+/*
+.founders-list{
+    margin:0 1% 30px;
+    text-align:center;
+}*/
+.founder-info{
+    text-align:center;
+    display:inline-block;
+   /* max-width:49%;*/
+    box-sizing:border-box;
+    padding:0 7% 0 7%;
+}
+.founder-info p{
+
+    font-size:20px;
+    text-shadow:1px 1px 1px #888;
+}
+.practices{
+    background: #e2e2e2; /* Old browsers */
+    background: -moz-linear-gradient(top,  #e2e2e2 31%, #dddddd 99%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(31%,#e2e2e2), color-stop(99%,#dddddd)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #e2e2e2 31%,#dddddd 99%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #e2e2e2 31%,#dddddd 99%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #e2e2e2 31%,#dddddd 99%); /* IE10+ */
+    background: linear-gradient(to bottom,  #e2e2e2 31%,#dddddd 99%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+    border-top:1px solid #fff;
+    border-bottom: 1px solid #999;
+    min-height:100%;
+}
+.practice-list{
+    font-family:'helveticabold', verdana, sans-serif;
+    font-weight:bold;
+    text-shadow:1px 0   1px #888;
+    color:#111;
+    line-height:120%;
+}
+.practices-article{
+    padding:0 30px;
+    margin:0;
+}
+.practice-list li{
+    margin:0.5em 0;
+
+}
+.container .show-all{
+    float:right;
+    font-style:italic;
+    font-family:"helveticabold", sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    text-decoration:underline;
+    padding:0 30px;
+    margin-bottom:30px;
+}
+.container .show-all:hover{
+    text-decoration:none;
+    opacity:0.8;
+
+}
+.news{
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 1%, #f0f0f0 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ffffff), color-stop(100%,#f0f0f0)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 1%,#f0f0f0 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 1%,#f0f0f0 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 1%,#f0f0f0 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 1%,#f0f0f0 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f0f0',GradientType=0 ); /* IE6-9 */
+
+    border-bottom: 1px solid #999;
+    box-shadow:inset 0 2px 10px -5px #444;
+}
+/*
+.news-slide{
+    padding:30px;
+    float:left;
+    max-width:33.3%;
+}*/
+.bx-wrapper{
+    padding:0 30px;
+    clear:both;
+}
+.bx-wrapper .bx-viewport{
+    box-shadow:none;
+    border:none;
+    background:transparent;
+}
+.slider4{
+    margin:0;
+    padding:0;
+}
+.news .bx-wrapper img {
+    max-width:83px;
+    max-height:83px;
+    display: block;
+}
+.news .bx-wrapper .bx-controls-direction a{
+    height:42px;
+    width:16px;
+    top:40px;
+}
+.doings .bx-wrapper .bx-controls-direction a{
+    height:42px;
+    width:16px;
+    margin-top:-21px;
+    top:50%;
+}
+.bx-controls .bx-prev{
+    background-position: -18px -40px;
+    left:0;
+}
+.bx-controls .bx-next{
+    background-position: -1px -1px;
+    right:0;
+}
+.bx-controls .bx-prev:hover{
+    background-position: -2px -40px ;
+}
+.bx-controls .bx-next:hover{
+    background-position: -17px 0;
+}
+.bx-controls .bx-pager{
+    display:none;
+
+}
+ul.slider4{
+    margin:0;
+
+}
+
+.news-head{
+    display:table;
+    min-height:88px;
+}
+.head-img, .head-header{
+    display:table-cell;
+    vertical-align:middle;
+
+}
+.news-header{
+    text-transform:uppercase;
+
+    vertical-align:middle;
+}
+.document{
+    float:left;
+    padding:0 15px;
+    width:20%;
+    min-width:180px;
+    text-align:center;
+}
+.document p{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.document-list{
+    overflow:hidden;
+    margin:0 auto;
+    clear:both;
+    padding:30px;
+    text-align:center;
+}
+.documents{
+    box-shadow:inset 0 -5px 5px -5px #444;
+}
+.head-img .thumb-link{
+    margin:0 10px 0 0;
+}
+h3{
+    font-size:25px;
+    font-family:'lucidagrande', verdans, sans-serif;
+    line-height:1.5em;
+}
+.permalink, .read-more{
+    line-height:2em;
+    vertical-align:middle;
+}
+.permalink:after, .read-more:after{
+    content:'»';
+    padding-left:0.5em;
+    vertical-align:middle;
+}
+article img{
+    height:auto;
+    max-width:100%;
+}
+article p{
+    margin:0.5em 0;
+}
+.thumb-news{
+    height:83px;
+    width:83px;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------SIDEBAR--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FOOTER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+footer{
+    background:#000;
+    color:#fff;
+    position:relative;
+    max-height:308px;
+}
+footer .container{
+    margin:0 auto;
+}
+.footer-menu{
+    display:table;
+    width:100%;
+    margin:0;
+}
+.footer-menu li{
+    display:table-cell;
+    width:18%;
+    padding:10px;
+}
+.footer-menu li a{
+    text-transform:uppercase;
+    color:#a0a0a0;
+    font-size:14px;
+}
+.footer-menu li a:hover{
+    color:#fff;
+    text-decoration:none;
+}
+.footer{
+    margin-top:-35px;
+    background:url('../images/logo-footer.png') center -10px no-repeat;
+}
+.copyright{
+    display:block;
+    width:180px;
+    padding:30px 0;
+    text-align:center;
+}
+address, address dd a.mail{
+    font-style:normal;
+    color:#fff;
+    font-size:19px;
+    font-family:'helveticabold', sans-serif;
+}
+address{
+    margin:2em -30px 0 0;
+}
+dt{
+    float:left;
+    vertical-align:top;
+    min-width:7em;
+}
+dd{
+    overflow:hidden;
+    font-weight:bold;
+}
+.social-links{
+    float:right;
+}
+.social-links li{
+    display:inline-block;
+}
+.social-links li a{
+    height:25px;
+    width:25px;
+    display:inline-block;
+    margin:2px;
+}
+.facebook{
+    background:url('../images/sprite-social.png') left top no-repeat;
+}
+.twitter{
+    background:url('../images/sprite-social.png') right top no-repeat;
+}
+@media screen and (max-width: 1060px) {
+
+    header{
+        font-size:0.8em;
+    }
+    li .top-menu{
+        font-size:1em;
+        padding:0 20px;
+    }
+    nav{
+       min-height:3em;
+    }
+    .slogan{
+        font-size:2em;
+    }
+    .slogan-ukr{
+        font-size:1em;
+    }
+    .logo{
+        height:180px;
+        width:160px;
+    }
+    .about-us{
+        font-size:1.2em;
+    }
+}
+@media screen and (max-width: 860px) {
+    li .top-menu {
+        font-size: 0.9em;
+        padding: 0 10px;
+    }
+    .about-us{
+
+        font-size:1em;
+        background:rgba(0, 0, 0, 0.5) url('../images/logo.png') 5% center no-repeat;
+        background-size :contain;
+        padding:2em 5% 2em 20%;
+    }
+    .slogan{
+        top:35%;
+    }
+    .about-us{
+        font-size:1.2em;
+    }
+
+    footer address{
+        font-size:1.15em;
+        margin:0;
+        padding:10px;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    footer address{
+        font-size:1em;
+    }
+    .social-links{
+        position:absolute;
+        top:95%;
+        right:35px;
+        padding:0;
+        min-width:10%;
+    }
+    .footer{
+        display:none;
+    }
+    .copyright{
+        position:absolute;
+        bottom:2em;
+        left:15px;
+        z-index:10;
+    }
+    .about-us{
+        font-size:1.1em;
+        padding-top:1em;
+        padding-bottom:1em;
+    }
+}
+@media screen and (max-width: 670px) {
+
+    .top-background{
+        display:none;
+    }
+    header .top-background-small{
+        display:block;
+
+    }
+    nav {
+        position:fixed;
+        text-align: left;
+        height: 1px;
+        padding: 0;
+        height: 100%;
+        left:-28%;
+        width:30%;
+        background: rgba(0, 0, 0, 0.7);
+
+    }
+    nav:hover{
+        left:0;
+    }
+    .slogan {
+        font-size: 1.6em;
+    }
+
+    .slogan-ukr {
+        font-size: 0.8em;
+    }
+
+    li .top-menu {
+        display: block;
+        font-size: 1.3em;
+        line-height: 3em;
+        margin: 0;
+        vertical-align: middle;
+    }
+
+    .top-nav li {
+        display: block;
+        background: none;
+        text-align: left;
+        padding-left: 1em;
+    }
+
+    .top-nav {
+        position: static;
+        top: 0;
+        display: block;
+        left: 0;
+        margin: 0;
+
+     /*   background: rgba(0, 0, 0, 0.5);*/
+
+    }
+
+    .right {
+        top: 50%;
+    }
+
+    .about-us {
+        position: fixed;
+        top: 0;
+        height:100%;
+        left: 98%;
+        color: #fff;
+        width: 30%;
+        background: rgba(0, 0, 0, 0.5);
+        background-image: none;
+        font-size: 0.8em;
+        line-height: 1.8em;
+        padding: 1em 2em 1em;
+        text-align: right;
+    }
+    .about-us:hover{
+        left:70%;
+    }
+
+    header .consultation {
+        top: 85%;
+        font-size:0.9em;
+    }
+
+    header .mail_us {
+        top: 65%;
+        font-size:0.9em;
+    }
+
+    header .slogan {
+        top: 50%;
+        z-index: 2;
+        font-size:1.6em;
+    }
+    header .slogan-ukr{
+        font-size:0.7em;
+    }
+    .footer-menu li a {
+        font-size: 0.8em;
+    }
+    .header{
+        /*height:50%;*/
+        position:fixed;
+        background-size:contain;
+    }
+}
+@media screen and (max-width: 570px) {
+    header .slogan {
+        top: 50%;
+        z-index: 2;
+        font-size:1.3em;
+    }
+    header .slogan-ukr{
+        font-size:0.7em;
+    }
+    .about-us, nav
+    {
+       transition:all 0.3s ease;
+    }
+}
+@media screen and (max-width: 480px) {
+    header .consultation {
+        top: 85%;
+        font-size:0.8em;
+    }
+
+    header .mail_us {
+        top: 65%;
+        font-size:0.8em;
+    }
+}
+.anchor{
+    padding-top:3.3em;
+    display:inline-block;
+}
+.links a:after{
+    content:'»';
+    padding-left:0.5em;
+    vertical-align:middle;
+}
+.content{
+    min-height:100%;
+    margin-bottom:-308px;
+    padding-bottom:308px;
+}
