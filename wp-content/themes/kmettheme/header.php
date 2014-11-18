@@ -43,7 +43,7 @@
         <ul class="top-nav right">
             <li><a href="<?php bloginfo(url); ?>#news" class="top-menu scroll">публікації</a></li>
             <li><a href="<?php bloginfo(url); ?>#doings" class="top-menu scroll">події</a></li>
-            <li><a href="<?php bloginfo(url); ?>#" class="top-menu scroll">зв’язок</a></li>
+            <li><a href="<?php echo get_permalink(70);?>"  class="top-menu">Зв'язок</a></li>
         </ul>
     </nav>
     <?php if ( is_page( 'Головна' ))
