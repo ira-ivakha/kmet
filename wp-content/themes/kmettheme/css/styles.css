@@ -67,7 +67,7 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
 	outline:none;
 
 }
-ul{    list-style:none;     }
+ul, ol {    list-style:none;     }
 textarea                       { vertical-align:top; }
 select, input, textarea           { outline:none; }
 input[type=submit]             { cursor:pointer; }
@@ -366,10 +366,6 @@ header .consultation{
 .practices-article{
     padding:0 30px;
     margin:0;
-}
-.practice-list li{
-    margin:0.5em 0;
-
 }
 .container .show-all{
     float:right;
@@ -824,4 +820,45 @@ dd{
     min-height:100%;
     margin-bottom:-308px;
     padding-bottom:308px;
+}
+article ul li:before{
+    content:"";
+    display:inline-block;
+    margin-bottom:0.2em;
+    height:0.4em;
+    width:0.4em;
+    line-height:1.5em;
+    vertical-align:middle;
+    margin-right:1em;
+    border:2px solid #000;
+    background:#000;
+    border-radius:1em;
+}
+article ul, .article ol{
+
+    margin:1em 0;
+}
+article b, .article strong{
+    font-size:1em;
+    font-weight:bold;
+}
+article ol {
+    counter-reset:li;
+    margin:1em 0;
+}
+article ol li , article ul li{
+    display:block;
+    line-height:1.5em;
+
+    margin:1em 0;
+}
+article  ol li:before {
+    content:counter(li);
+    counter-increment:li;
+    margin-right:1em;
+    font-weight:bold;
+    text-align:right;
+}
+article ul {
+    margin:1em 0;
 }
